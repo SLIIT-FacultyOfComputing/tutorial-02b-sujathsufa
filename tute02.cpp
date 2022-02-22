@@ -20,10 +20,10 @@ int main()
    printf("Enter Employee Type : ");
    scanf("%d", &etype);
    printf("Enter Salary  : ");
-   scanf("%lf", &salary);
+   scanf("%f", &salary);
    printf("Enter OtHrs : ");
    scanf("%d", &otHrs); 
-
+   
    switch (etype) {
       case 1 :
           otRate = 1000;
@@ -31,42 +31,43 @@ int main()
       case 2 :
           otRate = 1500;
           break;
-      case 3 :
+      default :
           otRate = 1700;
           break;
    }
+
+
    netSalary = salary + otHrs* otRate;
    printf("Net Salary is %f ", netSalary);
+  
    return 0;
 }*/
-
-#include<iostream>
+#include <iostream>
 int main()
 {
-  double salary,netSalary;
-  int etype, otHrs, otRate;
-
-  std ::cout << "Enter Employee Type: ";
-  std ::cin >> etype;
-  std ::cout << "Enter salary: ";
-  std ::cin >> salary;
-  std ::cout << "Enter OtHrs: ";
-  std ::cin >> otHrs;
-
-  switch (etype) {
+   double salary, netSalary;
+   int etype, otHrs, otRate;
+   std :: cout << "Enter Employee Type : ";
+   std :: cin >> etype;
+   std :: cout << "Enter Salary  : ";
+   std :: cin >> salary;
+   std :: cout << "Enter OtHrs : ";
+   std :: cin >> otHrs; 
+   
+   switch (etype) {
       case 1 :
           otRate = 1000;
           break;
       case 2 :
           otRate = 1500;
           break;
-      case 3 :
+      default :
           otRate = 1700;
           break;
    }
-      netSalary = salary + otHrs* otRate;
 
-  std ::cout << "Net Salary :" << netSalary << std :: endl;
-
-
+   netSalary = salary + otHrs* otRate;
+   std ::cout << "Net Salary is " << netSalary << std ::endl;
+  
+   return 0;
 }
